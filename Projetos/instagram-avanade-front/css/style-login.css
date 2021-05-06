@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:  #fafafa;
+    padding: 0;
+    margin:0;
+}
+
+main {
+    display: flex; 
+    justify-content:center; /* alinhamento horizontal */
+    align-items:center; /* alinhamento vertical */
+    padding: 50px 0px; /* 150px para cima, 0 nas laterais */
+}
+
+.logo {
+    width: 150px;
+}
+
+.login {
+   
+    width: 300px;
+    border: 1px solid gray;
+    padding: 40px 20px;
+    margin: 30px;
+    border-radius: 6px;
+
+}
+
+.login form input {
+    width: 100%;
+    height: 30px;
+    margin: 7px 0;
+    border-radius: 6px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+.login form button {
+    background-color: rgb(95, 117, 190);
+    color:white;
+    padding:7px 10px;
+    width:100%;
+    border:none;
+    border-radius: 6px;
+    margin: 20px 0;
+
+}
+
+
+
+

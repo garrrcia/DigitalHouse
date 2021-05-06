@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título Livro</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <div class="header-left">
+                <div class="logo">
+                    <img src="/img/logo-icon-black.png" alt="">
+                    <h2><a href="/">ViraPágina</a></h2>
+                </div>
+                <p><a href="/sobre">Sobre</a></p>
+                <p><a href="/livros">Livros</a></p>
+                <p><a href="/usuarios/perfil">Perfil</a></p>
+            </div>
+            <div class="header-right" id="wfind">
+                <form action="/livros/pesquisa" method="POST">
+                    <input type="text" name="termo" placeholder="Escreva o título, autor ou ISBN"> 
+                    <button type="submit" class="left">Buscar</button>
+                </form>
+            </div>
+        </header>
+        <section id="book-profile" class="top-content">
+            <div class="top-left">
+                <img id="book-img" src="<%= livro.imagem %> " alt="">
+
+            </div>
+            <div id="book-info" class="top-right">
+
+                <!-- <% %>   comandos, laços, funçoes
+
+                <%=  %>  prints -->
+
+                <h3><%= livro.titulo %></h3>
+
+                <div class="profile-label">
+                    <div class="profile-photo">
+                        <img src="<%= livro.usuario.imagem%>" alt="Foto de perfil">
+                    </div>
+                    <div class="name-title">
+                        <strong><%= livro.usuario.nome %></strong>
+                        <span>Usuário</span>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <h5>Disponível para Troca</h5>
+                <div class="fonte">
+                    <p id="autor"><%= livro.autor.autor %> </p>
+                    <p id="edicao">Editora: <%=livro.editora %></p>
+                    <p id="genero"><%=livro.genero.genero %></p>
+                    <p id="ano">Publicado em <%=livro.ano %></p>
+                    <p id="ISBN">ISBN: <%=livro.isbn%></p>
+                </div>
+                </div>
+
+                <!-- <div id="book-actions" class="buttons">
+                     <button type="submit">Adicionar aos Favoritos</button> -->
+                     
+
+                    <div class="whatsaap">
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=+*<%=livro.usuario.telefone%>*&text=%20Boa tarde <%=livro.usuario.nome%> vi seu livro *<%=livro.titulo%>* no *ViraPágina*, vamos trocar?" >
+                            <button class="letra" type="submit">Conversar com Leitor</button>
+                        </a>
+
+                        
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-left">
+            <p><a href="/">
+                <img src="/img/Vector2.png" alt="Ícone de livro">
+            </a></p>
+            <div class="linha-1">
+                <p>Baixe agora</p>
+                <p>Licensa</p>
+            </div>
+            <div class="linha-2">
+                <p><a href="/sobre">Sobre</a></p>
+                <p>Funcionalidades</p>
+                <p>Doações</p>
+                <p>Carreiras</p>
+                <p>Ajuda</p>
+                <p>Política de Privacidade</p>
+
+            </div>
+            <div class="linha-3">
+                <p>© 2021 Todos os direitos reservados</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>Baixe o App</p>
+            <img src="/img/apps.png" alt="">
+
+        </div>
+
+    </footer>
+  
+</body>
+
+<script src="js/main.js" ></script>
+
+</html>
